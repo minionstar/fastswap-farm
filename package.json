@@ -1,0 +1,33 @@
+{
+  "name": "masterchef",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "truffle test",
+    "build": "truffle compile",
+    "migrate": "truffle migrate",
+    "eslint": "eslint test/",
+    "solium": "solium --dir contracts",
+    "lint": "npm run eslint && npm run solium",
+    "coverage": "node --max-old-space-size=4096 ./node_modules/.bin/truffle run coverage",
+    "deploy:testnet": "truffle deploy --network testnet --reset",
+    "deploy:dev": "truffle deploy --network dev --reset",
+    "deploy:bsc": "truffle deploy --network bsc --reset"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.3.0",
+    "@truffle/hdwallet-provider": "1.2.3"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.11",
+    "chai": "^4.2.0",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "ganache-cli": "^6.12.1",
+    "solidity-coverage": "^0.7.12",
+    "solium": "^1.2.5",
+    "truffle": "^5.1.52",
+    "truffle-plugin-verify": "^0.5.7"
+  }
+}
